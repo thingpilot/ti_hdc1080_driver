@@ -7,10 +7,12 @@
 
 class HDC1080:public I2C {
 public:
+/** Constructor
+         */
       
-    HDC1080( PinName sda, PinName slc) ;                 // constructor
+    HDC1080( PinName sda, PinName slc) ;
 
-//    ~HDC1080();                                          // destructor
+   ~HDC1080();                                          // destructor
     
     int ReadSignature(void);
     uint16_t readTemperature( void);                   // to read the Temperature from HDC1080 

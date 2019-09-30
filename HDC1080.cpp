@@ -95,7 +95,7 @@ uint16_t  Manufacturer_ID = read2Bytes(CHIP_ADDRESS, HDC_MANID_OFF);
       return (unsigned long) HDC_CHIP_SER_ERROR;
     }      
  
-    wait_us(15); //0.015
+    wait_us(15); 
     memset(Buffer,0,4);
     res = this->read(CHIP_ADDRESS, Buffer,4);
     if (res != 0) {
