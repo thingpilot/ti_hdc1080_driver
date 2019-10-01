@@ -33,8 +33,8 @@
 //#define     I2C_FREQ                    100000
 
 /** Register Map.
- *  Device ID Register (offset = 7Fh) [reset = 3001h]
- *  Manufacturer ID Register (offset = 7Eh) [reset = 5449h]
+ *  Device ID Register (offset = FFh) [reset = 1050h]
+ *  Manufacturer ID Register (offset = FEh) [reset = 5449h]
  */
 #define     HDC1080_REG_TEMP_RESULT     0x00 //Temperature measurement output
 #define     HDC1080_REG_HUM_RESULT      0x01 //Relative Humidity measurement output
