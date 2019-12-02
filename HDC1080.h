@@ -1,6 +1,6 @@
 /** 
   * @file    HDC1080.h
-  * @version 1.0.0
+  * @version 0.1.0
   * @author  
   * @brief   Header file of the HDC1080 driver module.
   * @date    01/10/2019
@@ -14,7 +14,7 @@
   * HDC1080 HDC1080(SDA,SCL); 
   *  
   * int main() {
-  * float lght_lx=OPT3001.Readlight(); 
+  * float temp_C =  HDC1080.ReadTemperature(); 
   * }
   * @endcode
   */
@@ -48,7 +48,6 @@
 #define     HDC1080_H_DEFAULT_ADDRESS        (0x40 << 1)  
 
 
-
 /** This base class for the HDC1080 will be used to read Manufacture id, serial number
  *  Temperature and Humidity measurements
  */ 
@@ -78,8 +77,8 @@ public:
     ~HDC1080();                                          
     
     int ReadSignature(void);
-    float ReadTemperature( void);                   // to read the Temperature from HDC1080 
-    float ReadHumidity(void);                       // to read the Humidity from HDC1080
+    float ReadTemperature();                   
+    float ReadHumidity();                      
     unsigned long ReadDeviceId(void);            
     
 protected:
