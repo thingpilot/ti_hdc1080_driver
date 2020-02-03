@@ -110,10 +110,6 @@ uint16_t HDC1080::read2Bytes(int chip_addr, int offset)
     int res =this->write(chip_addr, Buffer, 1);
     if (res != 0) 
     {
-        return HDC1080_WRITE_FAIL;
-    }
-    else
-    {
         return  HDC1080_OK;
     }
     // read data from chip
@@ -122,7 +118,7 @@ uint16_t HDC1080::read2Bytes(int chip_addr, int offset)
     res = this->read(HDC1080_H_DEFAULT_ADDRESS, Buffer,2);
     if (res != 0) 
     {
-        return HDC1080_WRITE_FAIL;
+        return HDC1080_OK;
     }
     return  Buffer[0] << 8 | Buffer[1];
 }
